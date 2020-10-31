@@ -6,6 +6,7 @@ public class Menu {
     public void addPizza(Pizza pizza) {
         pizzas.add(pizza);
     }
+
     public String toString() {
         String result = "";
 
