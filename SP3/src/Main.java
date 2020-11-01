@@ -12,6 +12,7 @@ public class Main {
         menu.addPizza(new Pizza(8,61,"Victoria", "tomatsauce, ost, skinke, ananas, champignon, løg og oregano"));
         menu.addPizza(new Pizza(9,61,"Toronfo", "tomatsauce, ost, skinke, bacon, kebab, chili og oregano"));
         menu.addPizza(new Pizza(10,61,"Capricciosa", "tomatsauce, ost, skinke, champignon og oregano"));
+        menu.addPizza(new Pizza(11,61,"Hawaii","tomatsauce, ost, skinke, ananas og oregano"));
 
 
 
