@@ -37,9 +37,9 @@ public class PizzaRepository implements IPizzaRepository {
     public String toString() {
         String result = "";
 
-        for (Pizza i : pizzas) {
+        for (Pizza pizza : pizzas) {
 
-            result += "\n" + i;
+            result += "\n" + pizza;
 
         }
 
