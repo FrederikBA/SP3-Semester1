@@ -1,27 +1,31 @@
 package Controller;
 
-import java.util.Scanner;
-
-import Repositories.PizzaRepository;
+import Domain.Pizza;
+import Services.IPizzaService;
+import Services.PizzaService;
 import UI.Menu;
 
-public class PizzaController {
-    int choice = 0;
-    Scanner sc = new Scanner(System.in);
-    Menu menu = new Menu();
-    PizzaRepository pr = new PizzaRepository();
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
+public class PizzaController {
+    Scanner sc = new Scanner(System.in);
+    IPizzaService ps = new PizzaService();
+    Menu menu = new Menu();
+    List<Pizza> pizzas = new ArrayList<>();
+    int choice = 0;
 
     public void runProgram() {
+        menu.showMenu();
         while (choice != 9) {
-            menu.showMenu();
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    showPizzaMenu();
+                    ps.showPizzaMenu();
                     break;
-                case 2:
-                    createOrder();
+                case 9:
+                    exit();
                     break;
                 default:
                     choice = 9;
@@ -30,18 +34,7 @@ public class PizzaController {
         }
     }
 
-
-    private void createOrder() {
-    }
-
-    private void showPizzaMenu() {
-        System.out.println(pr.toString());
-        menu.showMenuPizza();
-        switch (choice) {
-            case 1:
-                ;
-                break;
-        }
-
+    private void exit() {
+        choice = 9;
     }
 }
